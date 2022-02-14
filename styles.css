@@ -1,0 +1,159 @@
+:root {
+  --force-color: #ef262b;
+  --font-color: #fbfff3;
+  --background-color: black;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  padding: 0;
+  list-style: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  padding: 10px 20px;
+  align-items: center;
+  color: var(--font-color);
+}
+.navBar > i {
+  color: var(--font-color);
+  font-size: 20px;
+}
+
+.navBar_logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.navBar_logo a {
+  color: var(--font-color);
+}
+
+.navBar_logo i {
+  color: var(--force-color);
+}
+.videoContainer {
+  display: flex;
+  background-color: tan;
+  height: 40vh;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: var(--font-color);
+}
+.videoContainer_Tools,
+.videoContainer_runningBar {
+  padding: 0px 10px;
+}
+
+.videoContainer_Tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.runningTools i {
+  padding: 0px 8px;
+}
+.otherTools {
+  display: flex;
+}
+.otherTools li {
+  padding: 0px 8px;
+}
+.videoContainer_runningBar {
+  background-color: white;
+  width: 90%;
+  align-self: center;
+  height: 3px;
+}
+.videoInfo {
+  padding: 10px 15px;
+}
+.videoInfo_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.videoInfo_content .tags {
+  color: blue;
+  font-size: 13px;
+}
+.videoInfo_content .title {
+  color: black;
+  font-size: 18px;
+  width: 100%;
+}
+.videoInfo_content .date {
+  color: gray;
+  font-size: 10px;
+}
+.videoInfo_icons {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.videoInfo_icons li {
+  color: gray;
+  font-size: 20px;
+  text-align: center;
+}
+.videoInfo_icons li a {
+  color: gray;
+}
+
+.videoInfo_userInfo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #ccd2d9;
+  border-bottom: 1px solid #ccd2d9;
+  padding: 5px 0px;
+}
+.userInfo_left {
+  display: flex;
+  align-items: center;
+}
+.videoInfo_userInfo i {
+  font-size: 40px;
+  padding-right: 20px;
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoContent span:nth-child(1) {
+  font-size: 25px;
+}
+.subscriptionBtn {
+}
+.nextVideo {
+  padding: 10px 15px;
+}
+
+.nextVideo_list {
+  padding: 0;
+}
+.nextVideo_list li {
+  display: flex;
+  padding: 10px 00px;
+}
+
+.nextVideo_list div {
+  width: 80px;
+  height: 50px;
+  background-color: aqua;
+  margin-right: 20px;
+}
