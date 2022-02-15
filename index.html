@@ -2,112 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>woutube</title>
+    <title>UTUBE 클론 페이지</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
     <script src="https://kit.fontawesome.com/e8993391fb.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 </head>
+<!-- #### point
+* 최대한 semantic 태그를 많이 사용할 것
+* 섹션이 나누어질 때는 주석으로 표기할 것
+* 전반적으로 사용되는 스타일은 root에 변수로 정의해서 사용하기 -->
 <body>
-    <div class="container">
-        <nav class="navBar">
-            <div class="navBar_logo">
-                <i class="fab fa-youtube"></i>
-                <a href="">Youtube</a>
-            </div>
+    <!-- header -->
+    <header>
+        <div class="logos">
+            <i class="fab fa-youtube"></i>
+            <span class="logoTitle">UUTIBE</span>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search"></i>
             <i class="fas fa-ellipsis-v"></i>
-        </nav>
-   
-    <div class="videoContainer">
-        <div class="videoContainer_Tools">
-            <div class="runningTools">
-                <i class="fas fa-play"></i>
-                <span>0:00 / 1:00</span>
-            </div>
-            <ul class="otherTools">
-                <li>
-                    <i class="fas fa-volume-up"></i>
-                </li>
-                <li>
-                    <i class="fas fa-th"></i>
-                </li>
-                <li>
-                    <i class="fas fa-ellipsis-v"></i>
-                </li>
+    </header>
+    <!--video player -->
+    <section class="videoPlayer">
+        <video controls src="/assets/cats.mp4"></video>
+    </section>
+    <div class="bottomContainer">
+    <!--video info and action btn -->
+    <section class="info">
+        <div class="videoInfo">
+            <ul>
+                <li class="tags"><span>#coding</span></li>
+                <li class="tags"><span>#challenge_check</span></li>
+                <li class="tags"><span>#push_git</span></li>
             </ul>
+            <div class="videoTitle">
+                <span id="videoTitle">클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 프론트엔드 개발자 입문편: HTML, CSS, Javascript</span>
+                <button id ="foldBtn">  <i class="fas fa-caret-down"></i></button>
+            </div>
+            <div class="videoMetaInfo">
+                <span>조회수 110,887회</span>
+                <span>2020. 3. 14.</span>
+            </div>
         </div>
-        <div class="videoContainer_runningBar"></div>
-        .
-    </div>
 
-    <div class="videoInfo">
-        <div class="videoInfo_content">
-            <span class="tags">tags...</span>
-            <span class="title">Almost before we knew it, we had left the ground.
-                Select this styleAlmost before we knew it, we had left the ground. Select this style
-                Almost before we knew it, we had left the ground. Select this style
-                Almost before we knew it, we had left the ground. Select this style
-            </span>
-            <p class="date">2022...</p>
-        </div>
-        <ul class="videoInfo_icons">
+        <ul class="actions" id="activeBtns">
             <li>
-                <a href="">
+                <button class="actionItem">
                     <i class="far fa-thumbs-up"></i>
                     <span>1</span>
-                </a>
+                </button>
             </li>
             <li>
-                <a href="">
+                <button class="actionItem">
                     <i class="far fa-thumbs-down"></i>
                     <span>2</span>
-                </a>
+                </button>
             </li>
             <li>
-                <a href="">
+                <button class="actionItem">
                     <i class="fas fa-reply"></i>
                     <span>3</span>
-                </a>
+                </button>
             </li>
             <li>
-                <a href="">
+                <button class="actionItem">
                     <i class="fas fa-plus"></i>
                     <span>4</span>
-                </a>
+                </button>
             </li>
             <li>
-                <a href="">
+                <button class="actionItem">
                     <i class="fas fa-flag"></i>
                     <span>5</span>
-                </a>
+                </button>
             </li>
         </ul>
-
-        <div class="videoInfo_userInfo">
-            <div class="userInfo_left">
-            <i class="fas fa-user-circle"></i>
-            <div class="infoContent">
-                <span class="userName">name</span>
-                <span class="userDesc">bla...</span>
+         <!-- channel and subscribe info-->
+        <div class="channelInfoAndSub">
+            <div class="channelInfo">
+                <i class="fas fa-user-circle"></i>
+                <div class="channelMetaInfo">
+                    <span class="name">드림코딩</span>
+                    <span class="subscribers">구독자 12.5만명</span>
+                </div>
             </div>
+            <button class="subscribeBtn">subscribe</button>
         </div>
-            <span class="subscriptionBtn">subscription</span>
-        </div>
-    </div>
-    <div class="nextVideo">
-        <span>notes...</span>
-        <ul class ="nextVideo_list">
+    </section>
+      <!-- upNect-->
+    <section class="upNext">
+        <span>다음재생 목록</span>
+        <ul class="playList">
             <li>
-                <div></div>
-                <span>blablablablablablablablablablablablablablablablablabla</span>
+                <video controls src="/assets/cats.mp4"></video>
+                <div class="nextInfo">
+                    <span class="title">프론트엔드 강의 - 프론트엔드 개발자 되기 입문편⭐️ (개념 + 클론코딩)</span>
+                    <span class="detailInfo">드림코딩 by elly</span>
+                </div>
+                <button><i class="fas fa-ellipsis-v"></i></button>
             </li>
             <li>
-                <div></div>
-                <span>blablablablablablablablablablablablablabla</span>
+                <video controls src="/assets/cats.mp4"></video>
+                <div class="nextInfo">
+                    <span class="title">프론트엔드 강의 - 프론트엔드 개발자 되기 입문편⭐️ (개념 + 클론코딩)</span>
+                    <span class="detailInfo">드림코딩 by elly</span>
+
+                </div>
+                <button><i class="fas fa-ellipsis-v"></i></button>
+            </li>
+            <li>
+                <video controls src="/assets/cats.mp4"></video>
+                <div class="nextInfo">
+                    <span class="title">프론트엔드 강의 - 프론트엔드 개발자 되기 입문편⭐️ (개념 + 클론코딩)</span>
+                    <span class="detailInfo">드림코딩 by elly</span>
+                </div>
+                <button><i class="fas fa-ellipsis-v"></i></button>
             </li>
         </ul>
-    </div> 
-</div>
+        </section>
+    </div>
 </body>
 </html>
